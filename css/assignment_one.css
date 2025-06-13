@@ -1,6 +1,119 @@
-/*
-Implement your CSS code in this file. Do not change anything in any other file.
-Only this will be graded.
-*/
+/* For desktop */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+#mainBody {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#rightContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(3, 160px);
+}
+
+#leftContainer {
+    gap: 100px;
+}
+
+#rightContainer, #leftContainer {
+    flex: 1;
+}
+
+.gridImage.zero {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+footer {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+#topMenu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
 
+/* For Tablet */
+@media (max-device-width: 1000px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    body {
+        width: 60%;
+    }
+
+    #mainBody {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #rightContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 160px);
+    }
+    
+    .display_md {
+        display: none;
+    }
+    
+    #topMenu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/*  For Mobile */
+@media (max-device-width: 570px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    
+    body {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header, #mainBody {
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    #topMenu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
